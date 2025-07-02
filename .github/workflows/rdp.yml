@@ -1,31 +1,3 @@
-الصفحة الرئيسية
-الخدمات السحابية RDP
-مجانى إنشاءRDP على GitHub في دقائق فقط 🚀 | شرح كامل خطوة بخطوة#linux #windows #remote #rdp #hacker
-الناشر :
-Kamel
--
-يونيو 16, 2025
-
-
-🎯 شرح تفصيلي لإنشاء RDP وLinux VNC من خلال GitHub (2025)
-🔒 إعداد بيئة عمل احترافية عن بُعد مجانًا من GitHub خطوة بخطوة
-
-🖥️ أولًا: إنشاء RDP (ويندوز) عبر GitHub Actions
-📌 المتطلبات:
-حساب GitHub مجاني
-حساب في موقع Ngrok (ويُفضل تفعيله ببطاقة بنكية)
-متصفح ويب
-برنامج RDP على جهازك (مثل Remote Desktop Connection)
-✅ الخطوات:
-إنشاء Repository جديد:
-- ادخل إلى GitHub New Repo
-- سمه مثلًا windows-rdp واجعله Public
-- اضغط على Create Repository
-إعداد GitHub Actions:
-- انتقل إلى تبويب Actions
-- اختر set up a workflow yourself
-- سمي الملف: .github/workflows/rdp.yml
-- الصق الكود التالي:
 name: RDP
 
 on: [workflow_dispatch]
@@ -47,3 +19,4 @@ jobs:
           Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server' -Name 'fDenyTSConnections' -Value 0
           Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
           ./ngrok.exe tcp 3389
+
